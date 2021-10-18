@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'prestamo',
     loadChildren: () => import('./prestamo/prestamo.module').then( m => m.PrestamoPageModule)
   },
+  {
+    path: 'editar',
+    loadChildren: () => import('./editar/editar.module').then( m => m.EditarPageModule)
+  },
 ];
 
 @NgModule({

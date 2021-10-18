@@ -3,8 +3,10 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-font-family: ‘AppFont’;
+  --ion-font-weight: bold;
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #0bb2b1;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -83,7 +85,7 @@
    */
 
   body {
-    --ion-color-primary: #428cff;
+    --ion-color-primary: #0bb2b1;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;
@@ -233,4 +235,9 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+@font-face {
+  font-family: AppFont;
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap'); //change url accordingly
+  
 }

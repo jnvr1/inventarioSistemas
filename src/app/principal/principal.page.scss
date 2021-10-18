@@ -1,0 +1,39 @@
+.botones{
+    margin-top: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ion-img{
+    cursor: pointer;
+    width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+ion-footer{
+    text-align: center;
+    ion-toolbar{
+        --background: red;
+    }
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px){
+    .botones{
+        display: inline;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ion-img{
+        cursor: pointer;
+        display: inline-block;
+        width: 25%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+}

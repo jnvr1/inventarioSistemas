@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>inventario</ion-title>
+    <ion-title><ion-icon name="chevron-back-outline" (click)="goToPrincipal()"></ion-icon>Inventario</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
 
+  <div class="filtro">
+    <ion-item>
+    <ion-item>
+      <ionic-selectable placeholder="Tipo" [(ngModel)]="FiltroTipo" [items]="tipo[0]"
+      [canSearch]="true" (onChange)="filtroTipo()" class="mar" [isMultiple]="true">
+		  </ionic-selectable>
+    </ion-item>
+    <ion-item>
+      <ionic-selectable placeholder="Marca"[(ngModel)]="FiltroMarca" [items]="marca[0]"
+      [canSearch]="true" (onChange)="filtroMarca()" class="mar" [isMultiple]="true" *ngIf="FiltroTipo?.length>0">
+		  </ionic-selectable>
+    </ion-item>
+    <ion-item>
+      <ionic-selectable placeholder="Modelo"[(ngModel)]="FiltroModelo" [items]="modelo[0]"
+      [canSearch]="true" (onChange)="filtroModelo()" class="mar" [isMultiple]="true" *ngIf="FiltroMarca?.length>0">
+      </ionic-selectable>
+    </ion-item>
+    <ion-item>
+      <ionic-selectable placeholder="Estado"[(ngModel)]="FiltroEstado" [items]="estado"
+      [canSearch]="true" (onChange)="filtroEstado()" class="mar" [isMultiple]="true" *ngIf="FiltroModelo?.length>0">
+		  </ionic-selectable>
+    </ion-item>
+  </ion-item>
+  </div>
+  <ion-item *ngFor="let item of items1 |keyvalue" style="--radius:{{item.value.Color}}" class="item" (click)="verItem(item.key)">
+    <ion-label>{{item.value.Tipo}}</ion-label>
+    <ion-label>{{item.value.Marca}}</ion-label>
+    <ion-label>{{item.value.Ubicacion}} </ion-label>
+    <ion-icon *ngIf="item.value.Estado == 'Bueno'" name="checkmark-circle" style="--icono:{{item.value.color}}" class="icon"></ion-icon>
+    <ion-icon *ngIf="item.value.Estado == 'Dañado'" name="build" style="--icono:{{item.value.color}}" class="icon"></ion-icon>
+    <ion-icon *ngIf="item.value.Estado == 'Irreparable'" name="alert-circle" style="--icono:{{item.value.color}}" class="icon"></ion-icon>
+  </ion-item>
 </ion-content>

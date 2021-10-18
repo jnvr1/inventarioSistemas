@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { InventarioPageRoutingModule } from './inventario-routing.module';
 
 import { InventarioPage } from './inventario.page';
-
+import { IonicSelectableModule } from 'ionic-selectable';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InventarioPageRoutingModule
+    InventarioPageRoutingModule,
+    IonicSelectableModule
   ],
   declarations: [InventarioPage]
 })

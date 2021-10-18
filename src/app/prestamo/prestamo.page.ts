@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrestamoPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl:NavController) { }
 
   ngOnInit() {
   }
-
+  
+  goToPrincipal(){
+    this.navCtrl.back()
+  }
 }

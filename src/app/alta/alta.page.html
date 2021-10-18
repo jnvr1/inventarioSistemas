@@ -1,9 +1,64 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>alta</ion-title>
+    <ion-title><ion-icon name="chevron-back-outline" (click)="goToPrincipal()"></ion-icon>Alta de producto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
+  <form [formGroup]="ionicForm" (ngSubmit)="alta()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Tipo</ion-label>
+      <ion-input formControlName="tipo" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input formControlName="marca" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Modelo</ion-label>
+      <ion-input formControlName="modelo" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Numero de serie</ion-label>
+      <ion-input formControlName="ns" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Estado</ion-label>
+      <ion-select formControlName="estado" type="text" required>
+        <ion-select-option value="Bueno">Bueno</ion-select-option>
+        <ion-select-option value="Dañado">Dañado</ion-select-option>
+        <ion-select-option value="Irreparable">Irreparable</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Ubicación</ion-label>
+      <ion-input formControlName="ubicacion" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Fecha de registro</ion-label>
+      <ion-datetime formControlName="registro" value="{{defaultDate}}" required></ion-datetime>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Costo</ion-label>
+      <ion-input formControlName="costo" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" *ngIf="ionicForm.value.estado=='Dañado'">
+      <ion-label position="floating">Descripción de daño</ion-label>
+      <ion-input formControlName="descripcion" type="text" required></ion-input> 
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Registrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

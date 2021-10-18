@@ -1,11 +1,13 @@
 <ion-content [fullscreen]="true" color="dark">
+
+  <ion-img src="../../assets/logo_rodadora.png"></ion-img>
   <form class="login">    
-    <ion-item lines="full" color="medium">
+    <ion-item lines="full" color="white">
       <ion-label position="floating">Email</ion-label>
       <ion-input type="email" #email required></ion-input>
     </ion-item> 
 
-    <ion-item lines="full" color="medium">
+    <ion-item lines="full" color="white">
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password" #password required (keyup.enter)="logIn(email,password)"></ion-input>
     </ion-item>

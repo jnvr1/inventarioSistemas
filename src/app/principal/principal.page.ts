@@ -24,4 +24,7 @@ export class PrincipalPage implements OnInit {
   goToInventario(){
     this.navCtrl.navigateForward("inventario")
   }
+  goToPrestamo(){
+    this.navCtrl.navigateForward("prestamo")
+  }
 }

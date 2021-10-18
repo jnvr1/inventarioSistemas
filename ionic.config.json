@@ -1,5 +1,7 @@
 {
   "name": "inventarioSistemas",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

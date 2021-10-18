@@ -1,0 +1,21 @@
+ion-icon{
+    margin-right: 5%;
+    zoom: 1.5;
+    cursor: pointer;
+}
+@media only screen and (min-width: 600px){
+    .botones{
+        display: inline;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ion-img{
+        cursor: pointer;
+        display: inline-block;
+        width: 25%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+}

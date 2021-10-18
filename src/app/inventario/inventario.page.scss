@@ -1,0 +1,47 @@
+ion-title{
+    ion-icon{
+    margin-right: 5%;
+    zoom: 1.5;
+    cursor: pointer;
+    }
+}
+ion-item{
+    cursor: pointer;
+    margin: 1%;
+}
+@media only screen and (min-width: 600px){
+    .botones{
+        display: inline;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ion-img{
+        cursor: pointer;
+        display: inline-block;
+        width: 25%;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    ion-item{
+        cursor: pointer;
+        margin: .5%;
+    }
+    .filtro{
+        ion-item{
+            cursor:auto;
+        }
+        ion-icon{
+            cursor: pointer;
+        }
+    }
+}
+
+
+.item{
+    --ion-item-color: var(--radius)  !important
+}
+.icon{
+    color: var(--icono);
+}
