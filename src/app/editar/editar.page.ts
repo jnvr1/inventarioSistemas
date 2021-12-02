@@ -33,7 +33,7 @@ export class EditarPage implements OnInit {
         this.id = this.router.getCurrentNavigation().extras.state;
       }
       this.plat=this.platform.is("android")
-      alert(this.plat)
+      
      }
 
   ngOnInit() {
